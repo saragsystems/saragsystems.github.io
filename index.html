@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sarag Systems Pvt Ltd | Enterprise Data Science, VLSI & ITC</title>
-  <meta name="description" content="Sarag Systems Pvt Ltd (CIN: U72200TG1985PTC005952) - Advanced Software Engineering, Relational SQL & Data Science, Precision VLSI Semiconductor Design, and ITC Infrastructure." />
+  <title>Sarag Systems Pvt Ltd | Data Science, VLSI & ITC Solutions</title>
+  <meta name="description" content="Sarag Systems Pvt Ltd (CIN: U72200TG1985PTC005952) - Advanced Software Engineering, SQL Development, Data Science, VLSI Semiconductor Design, and ITC Infrastructure." />
 
-  <!-- Fonts & Icons -->
+  <!-- Google Fonts & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <style>
@@ -44,8 +44,8 @@
       line-height: 1.6;
       overflow-x: hidden;
       background-image: 
-        radial-gradient(circle at 15% 20%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
-        radial-gradient(circle at 85% 60%, rgba(6, 182, 212, 0.1) 0%, transparent 45%),
+        radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.14) 0%, transparent 40%),
+        radial-gradient(circle at 85% 55%, rgba(6, 182, 212, 0.12) 0%, transparent 45%),
         radial-gradient(circle at 50% 90%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
       background-attachment: fixed;
     }
@@ -55,7 +55,6 @@
       color: inherit;
     }
 
-    /* Ambient Grid Background */
     .grid-overlay {
       position: fixed;
       inset: 0;
@@ -67,13 +66,13 @@
       z-index: 0;
     }
 
-    /* Navigation */
+    /* Navigation Bar */
     header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      background: rgba(3, 7, 18, 0.85);
+      background: rgba(3, 7, 18, 0.88);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border-subtle);
@@ -93,7 +92,7 @@
     .brand-box {
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      gap: 2px;
     }
 
     .brand-title {
@@ -164,8 +163,8 @@
 
     /* Hero Section */
     .hero {
-      padding: 160px 1.5rem 80px;
-      max-width: 1100px;
+      padding: 175px 1.5rem 80px;
+      max-width: 1150px;
       margin: 0 auto;
       text-align: center;
     }
@@ -174,43 +173,60 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 0.4rem 1.1rem;
+      padding: 0.45rem 1.3rem;
       border-radius: 9999px;
-      background: rgba(99, 102, 241, 0.1);
-      border: 1px solid rgba(99, 102, 241, 0.3);
-      color: #a5b4fc;
-      font-size: 0.8rem;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.35);
+      color: #c7d2fe;
+      font-size: 0.82rem;
       font-weight: 600;
-      margin-bottom: 1.8rem;
+      margin-bottom: 2rem;
+      letter-spacing: 0.3px;
     }
 
     .hero-pill i {
       color: var(--accent-emerald);
-      font-size: 0.75rem;
+      font-size: 0.8rem;
     }
 
-    .hero h1 {
+    /* Primary Big Company Name */
+    .hero-company-name {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2.4rem, 5.5vw, 4rem);
-      font-weight: 700;
-      line-height: 1.15;
-      letter-spacing: -1.5px;
-      margin-bottom: 1.5rem;
-      color: #fff;
-    }
-
-    .hero h1 .gradient-text {
-      background: linear-gradient(135deg, #818cf8 0%, #38bdf8 50%, #34d399 100%);
+      font-size: clamp(3rem, 7.5vw, 5.4rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin-bottom: 1.2rem;
+      background: linear-gradient(135deg, #ffffff 15%, #cbd5e1 55%, #60a5fa 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      text-shadow: 0 10px 40px rgba(99, 102, 241, 0.2);
     }
 
-    .hero p {
-      font-size: clamp(1rem, 2.2vw, 1.18rem);
+    /* Subtitle Tagline */
+    .hero-tagline {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.25rem, 2.8vw, 1.85rem);
+      font-weight: 600;
+      line-height: 1.4;
+      letter-spacing: -0.5px;
+      margin-bottom: 1.6rem;
+      color: #cbd5e1;
+    }
+
+    .hero-tagline span {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    .hero-description {
+      font-size: clamp(0.95rem, 2vw, 1.12rem);
       color: var(--text-secondary);
-      max-width: 760px;
+      max-width: 780px;
       margin: 0 auto 2.5rem;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     .hero-cta {
@@ -230,13 +246,13 @@
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
-      box-shadow: 0 10px 28px rgba(99, 102, 241, 0.3);
+      box-shadow: 0 10px 28px rgba(99, 102, 241, 0.35);
       transition: all 0.3s ease;
     }
 
     .btn-glow:hover {
       transform: translateY(-2px);
-      box-shadow: 0 14px 34px rgba(6, 182, 212, 0.4);
+      box-shadow: 0 14px 34px rgba(6, 182, 212, 0.45);
     }
 
     .btn-secondary {
@@ -258,7 +274,7 @@
     /* Enterprise Stats Bar */
     .stats-strip {
       max-width: 1200px;
-      margin: 2rem auto 4rem;
+      margin: 1.5rem auto 4.5rem;
       padding: 0 1.5rem;
     }
 
@@ -268,26 +284,26 @@
       border-radius: 16px;
       backdrop-filter: blur(16px);
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      padding: 1.8rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      padding: 1.5rem 2rem;
       gap: 1.5rem;
-      text-align: center;
+      align-items: center;
     }
 
-    .stat-item h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.8rem;
-      font-weight: 700;
+    .stat-box-row {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      font-size: 0.88rem;
+    }
+
+    .stat-box-row i {
+      color: var(--accent-cyan);
+      font-size: 1.15rem;
+    }
+
+    .stat-box-row strong {
       color: #fff;
-      margin-bottom: 0.2rem;
-    }
-
-    .stat-item p {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      font-weight: 600;
     }
 
     /* Services Section */
@@ -625,13 +641,14 @@
       color: var(--text-muted);
     }
 
-    /* Responsive adjustments */
+    /* Responsive */
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .contact-layout { grid-template-columns: 1fr; }
       .office-grid { grid-template-columns: 1fr; }
       .footer-content { grid-template-columns: 1fr; gap: 2rem; }
-      .hero { padding-top: 130px; }
+      .hero { padding-top: 140px; }
+      .hero-company-name { letter-spacing: -1px; }
       .hero-cta { flex-direction: column; }
       .btn-glow, .btn-secondary { width: 100%; justify-content: center; }
     }
@@ -641,7 +658,7 @@
 
   <div class="grid-overlay"></div>
 
-  <!-- Navigation -->
+  <!-- Header Navigation -->
   <header>
     <div class="nav-container">
       <div class="brand-box">
@@ -660,42 +677,49 @@
   <main>
     <!-- Hero Section -->
     <section class="hero" id="home">
+      <!-- Non-repeating Badge -->
       <div class="hero-pill">
-        <i class="fa-solid fa-circle"></i> Established November 14, 1985 &bull; 40+ Years of Excellence
+        <i class="fa-solid fa-shield-halved"></i> 40+ Years of Engineering Excellence &bull; Trusted IT Partner
       </div>
-      <h1>Next-Gen Engineering in <br /><span class="gradient-text">Data Science, VLSI & ITC</span></h1>
-      <p>
-        Sarag Systems Pvt Ltd delivers mission-critical technology solutions — powering enterprises with advanced SQL architectures, sub-micron VLSI silicon designs, and dependable ITC software infrastructure.
+
+      <!-- Main Focal Point: Big Company Name -->
+      <h1 class="hero-company-name">Sarag Systems Pvt Ltd</h1>
+
+      <!-- Proportional Subtitle Tagline -->
+      <h2 class="hero-tagline">
+        Innovating Through <span>Data Science, VLSI & ITC</span>
+      </h2>
+
+      <!-- Description -->
+      <p class="hero-description">
+        Delivering end-to-end technology solutions — empowering businesses with robust SQL & Data Science architectures, precision VLSI semiconductor design, and mission-critical ITC software infrastructure.
       </p>
+
       <div class="hero-cta">
-        <a href="#services" class="btn-glow">Explore Engineering Services <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="#contact" class="btn-secondary">Speak with HR & Operations</a>
+        <a href="#services" class="btn-glow">Explore Services <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#contact" class="btn-secondary">Contact HR & Operations</a>
       </div>
     </section>
 
-    <!-- Stats Highlight Strip -->
+    <!-- Corporate Information Bar -->
     <div class="stats-strip">
       <div class="stats-card">
-        <div class="stat-item">
-          <h3>1985</h3>
-          <p>Founded & Incorporated</p>
+        <div class="stat-box-row">
+          <i class="fa-solid fa-id-card"></i>
+          <div>CIN: <strong>U72200TG1985PTC005952</strong></div>
         </div>
-        <div class="stat-item">
-          <h3>SQL & ML</h3>
-          <p>Data Science Core</p>
+        <div class="stat-box-row">
+          <i class="fa-solid fa-calendar-check"></i>
+          <div>Incorporated: <strong>November 14, 1985</strong></div>
         </div>
-        <div class="stat-item">
-          <h3>ASIC / FPGA</h3>
-          <p>VLSI Semiconductor</p>
-        </div>
-        <div class="stat-item">
-          <h3>Hyderabad</h3>
-          <p>Dual Hub Presence</p>
+        <div class="stat-box-row">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>Hub: <strong>Hyderabad, Telangana, India</strong></div>
         </div>
       </div>
     </div>
 
-    <!-- Core Services Section -->
+    <!-- Core Services -->
     <section class="section-wrap" id="services">
       <div class="section-head">
         <span class="tag">Engineering Capabilities</span>
@@ -757,7 +781,7 @@
       </div>
     </section>
 
-    <!-- Contact & Offices Section -->
+    <!-- Contact & Offices -->
     <section class="section-wrap" id="contact">
       <div class="section-head">
         <span class="tag">Get in Touch</span>
@@ -766,7 +790,6 @@
       </div>
 
       <div class="contact-layout">
-        <!-- Left: HR & Office Details -->
         <div class="corporate-info-box">
           <div class="hr-feature-card">
             <span class="hr-tag">HR Department & Hiring</span>
@@ -797,7 +820,6 @@
           </div>
         </div>
 
-        <!-- Right: Contact Form -->
         <div class="form-panel">
           <h3>Send an Inquiry</h3>
           <p>Fill out the form and our technical desk will get back to you.</p>
