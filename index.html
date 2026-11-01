@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarag Systems Pvt Ltd | IT, Data Science & VLSI Solutions</title>
+  <meta name="description" content="Sarag Systems Pvt Ltd provides cutting-edge Software Services, SQL & Data Science, VLSI Semiconductor Design, and ITC Infrastructure Solutions." />
+
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --accent: #06b6d4;
+      --dark-bg: #0b1120;
+      --card-bg: #131d33;
+      --surface: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #334155;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--dark-bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navigation */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(11, 17, 32, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #60a5fa, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+    }
+
+    .btn-contact {
+      background: var(--primary);
+      color: #fff !important;
+      padding: 0.6rem 1.4rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-contact:hover {
+      background: var(--primary-dark);
+      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 180px 2rem 100px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      background: rgba(37, 99, 235, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #60a5fa;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.5px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, #60a5fa, #22d3ee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 780px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .hero-btns {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      padding: 0.85rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 0.85rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn-outline:hover {
+      background: var(--surface);
+    }
+
+    /* Core Pillars / Services */
+    .services-section {
+      padding: 90px 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-header h2 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+      position: relative;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: #3b82f6;
+    }
+
+    .card-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .icon-sql {
+      background: rgba(6, 182, 212, 0.15);
+      color: #06b6d4;
+    }
+
+    .icon-vlsi {
+      background: rgba(139, 92, 246, 0.15);
+      color: #a78bfa;
+    }
+
+    .icon-itc {
+      background: rgba(37, 99, 235, 0.15);
+      color: #60a5fa;
+    }
+
+    .service-card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .feature-list {
+      list-style: none;
+    }
+
+    .feature-list li {
+      font-size: 0.9rem;
+      color: var(--text-main);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .feature-list li i {
+      color: #10b981;
+      font-size: 0.8rem;
+    }
+
+    /* Capabilities / Tech Stack */
+    .tech-section {
+      background: var(--card-bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 2rem;
+    }
+
+    .tech-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .tech-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .tech-box h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #60a5fa;
+    }
+
+    .tech-box p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 90px 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .contact-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .contact-info h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info p {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+      color: var(--text-main);
+    }
+
+    .info-item i {
+      color: var(--primary);
+      font-size: 1.2rem;
+      width: 25px;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--primary);
+    }
+
+    .btn-submit {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-submit:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+      .nav-links {
+        display: none;
+      }
+      .contact-card {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">Sarag Systems</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#capabilities">Tech Stack</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="btn-contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="badge">Next-Gen Software & Hardware Engineering</div>
+    <h1>Innovating Through <span>Data Science, VLSI & ITC</span></h1>
+    <p>
+      Sarag Systems Pvt Ltd delivers end-to-end technology solutions — empowering businesses with robust SQL & Data Science architectures, precision VLSI design, and mission-critical IT & Communications infrastructure.
+    </p>
+    <div class="hero-btns">
+      <a href="#services" class="btn-primary">Explore Services <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#contact" class="btn-outline">Talk to Experts</a>
+    </div>
+  </section>
+
+  <!-- Core Services -->
+  <section class="services-section" id="services">
+    <div class="section-header">
+      <h2>Our Core Capabilities</h2>
+      <p>Customized, high-performance technology services built for complex enterprise requirements.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- 1. SQL & Data Science -->
+      <div class="service-card">
+        <div class="card-icon icon-sql">
+          <i class="fa-solid fa-database"></i>
+        </div>
+        <h3>SQL & Data Science</h3>
+        <p>
+          High-performance relational database engineering, complex query architecture, automated ETL pipelines, and data-driven intelligence.
+        </p>
+        <ul class="feature-list">
+          <li><i class="fa-solid fa-check"></i> Advanced SQL Development & Query Optimization</li>
+          <li><i class="fa-solid fa-check"></i> Data Warehousing, Data Modeling & ETL</li>
+          <li><i class="fa-solid fa-check"></i> Predictive Analytics & Machine Learning Models</li>
+          <li><i class="fa-solid fa-check"></i> PostgreSQL, MySQL, SQL Server & Big Data</li>
+        </ul>
+      </div>
+
+      <!-- 2. VLSI Design -->
+      <div class="service-card">
+        <div class="card-icon icon-vlsi">
+          <i class="fa-solid fa-microchip"></i>
+        </div>
+        <h3>VLSI & Semiconductor Design</h3>
+        <p>
+          Comprehensive semiconductor design and verification services tailored for high reliability, low power, and optimized performance.
+        </p>
+        <ul class="feature-list">
+          <li><i class="fa-solid fa-check"></i> RTL Design & Functional Verification (Verilog/SV)</li>
+          <li><i class="fa-solid fa-check"></i> ASIC & FPGA Prototyping and Synthesis</li>
+          <li><i class="fa-solid fa-check"></i> Physical Design, Timing Analysis & DFT</li>
+          <li><i class="fa-solid fa-check"></i> Embedded Systems & Hardware Co-Design</li>
+        </ul>
+      </div>
+
+      <!-- 3. ITC Services -->
+      <div class="service-card">
+        <div class="card-icon icon-itc">
+          <i class="fa-solid fa-network-wired"></i>
+        </div>
+        <h3>ITC & Software Services</h3>
+        <p>
+          Reliable Information Technology & Communications solutions engineered to keep modern business operations secure and interconnected.
+        </p>
+        <ul class="feature-list">
+          <li><i class="fa-solid fa-check"></i> Enterprise IT Infrastructure & Cloud Integration</li>
+          <li><i class="fa-solid fa-check"></i> Network Architecture, VoIP & Telecom Support</li>
+          <li><i class="fa-solid fa-check"></i> Custom Software & API Development</li>
+          <li><i class="fa-solid fa-check"></i> Managed IT Services & 24/7 Monitoring</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities / Tech Stack -->
+  <section class="tech-section" id="capabilities">
+    <div class="tech-container">
+      <div class="section-header">
+        <h2>Technology & Tools We Specialize In</h2>
+        <p>Industry-standard frameworks and development environments powering our work.</p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-box">
+          <h4>Data & Analytics</h4>
+          <p>PostgreSQL, MySQL, Python, Pandas, Tableau, PySpark</p>
+        </div>
+        <div class="tech-box">
+          <h4>Silicon & Hardware</h4>
+          <p>Verilog, SystemVerilog, UVM, Cadence, Synopsys, Vivado</p>
+        </div>
+        <div class="tech-box">
+          <h4>ITC & Cloud</h4>
+          <p>AWS, Azure, Docker, Linux Systems, Cisco Networking</p>
+        </div>
+        <div class="tech-box">
+          <h4>Software Engineering</h4>
+          <p>REST APIs, Microservices, Node.js, Git, CI/CD</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us -->
+  <section class="contact-section" id="contact">
+    <div class="contact-card">
+      <div class="contact-info">
+        <h3>Connect with Sarag Systems</h3>
+        <p>Ready to collaborate or need expert technical consultation? Reach out to us directly.</p>
+        <div class="info-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>contact@saragsystems.com</span>
+        </div>
+        <div class="info-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>India</span>
+        </div>
+        <div class="info-item">
+          <i class="fa-solid fa-globe"></i>
+          <span>saragsystems.github.io</span>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Subject (e.g., VLSI or Data Science Enquiry)" required />
+          </div>
+          <div class="form-group">
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Sarag Systems Pvt Ltd. All rights reserved. | Built with GitHub Pages</p>
+  </footer>
+
+</body>
+</html>
