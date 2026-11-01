@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sarag Systems Pvt Ltd | IT, Data Science & VLSI Solutions</title>
-  <meta name="description" content="Sarag Systems Pvt Ltd (CIN: U72200TG1985PTC005952) - Pioneering Software Services, SQL & Data Science, VLSI Design, and ITC Infrastructure since 1985." />
+  <title>Sarag Systems Pvt Ltd | Data Science, VLSI & ITC Solutions</title>
+  <meta name="description" content="Sarag Systems Pvt Ltd (CIN: U72200TG1985PTC005952) - Advanced Software Services, SQL Development, Data Science, VLSI Design, and ITC Infrastructure." />
 
   <!-- Google Fonts & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,14 +44,14 @@
       color: inherit;
     }
 
-    /* Navigation */
+    /* Navigation Bar */
     header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      background: rgba(11, 17, 32, 0.92);
-      backdrop-filter: blur(12px);
+      background: rgba(11, 17, 32, 0.94);
+      backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
       z-index: 1000;
     }
@@ -59,32 +59,50 @@
     .nav-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 1rem 2rem;
+      padding: 0.85rem 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
+    .brand-box {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
     .logo {
-      font-size: 1.45rem;
+      font-size: 1.35rem;
       font-weight: 800;
       letter-spacing: -0.5px;
       background: linear-gradient(135deg, #60a5fa, #38bdf8);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .cin-header-tag {
+      font-size: 0.72rem;
+      color: #94a3b8;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    .cin-header-tag span {
+      color: #38bdf8;
     }
 
     .nav-links {
       display: flex;
       list-style: none;
-      gap: 1.8rem;
+      gap: 1.5rem;
       align-items: center;
     }
 
     .nav-links a {
       color: var(--text-muted);
       font-weight: 500;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       transition: color 0.3s ease;
     }
 
@@ -92,48 +110,46 @@
       color: var(--text-main);
     }
 
-    .btn-contact {
+    .btn-contact-nav {
       background: var(--primary);
       color: #fff !important;
-      padding: 0.55rem 1.3rem;
+      padding: 0.5rem 1.2rem;
       border-radius: 8px;
       font-weight: 600;
       transition: all 0.3s ease;
     }
 
-    .btn-contact:hover {
+    .btn-contact-nav:hover {
       background: var(--primary-dark);
       box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
     }
 
     /* Hero Section */
     .hero {
-      padding: 170px 2rem 90px;
+      padding: 155px 1.5rem 80px;
       max-width: 1200px;
       margin: 0 auto;
       text-align: center;
-      position: relative;
     }
 
     .badge {
       display: inline-block;
-      padding: 0.4rem 1.2rem;
+      padding: 0.4rem 1.1rem;
       border-radius: 50px;
       background: rgba(37, 99, 235, 0.15);
       border: 1px solid rgba(59, 130, 246, 0.3);
       color: #60a5fa;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 600;
-      margin-bottom: 1.5rem;
-      letter-spacing: 0.5px;
+      margin-bottom: 1.3rem;
     }
 
     .hero h1 {
-      font-size: 3.3rem;
+      font-size: clamp(2rem, 5.2vw, 3.2rem);
       font-weight: 800;
       line-height: 1.25;
-      margin-bottom: 1.5rem;
-      letter-spacing: -1px;
+      margin-bottom: 1.3rem;
+      letter-spacing: -0.5px;
     }
 
     .hero h1 span {
@@ -143,16 +159,18 @@
     }
 
     .hero p {
-      font-size: 1.15rem;
+      font-size: clamp(0.95rem, 2.5vw, 1.15rem);
       color: var(--text-muted);
-      max-width: 780px;
-      margin: 0 auto 2.2rem;
+      max-width: 760px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
     }
 
     .hero-btns {
       display: flex;
       justify-content: center;
-      gap: 1.2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
 
     .btn-primary {
@@ -163,6 +181,7 @@
       font-weight: 600;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 0.5rem;
       transition: transform 0.2s, box-shadow 0.2s;
     }
@@ -178,6 +197,9 @@
       padding: 0.8rem 1.8rem;
       border-radius: 8px;
       font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       transition: background 0.3s;
     }
 
@@ -190,18 +212,18 @@
       background: var(--card-bg);
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      padding: 1.2rem 2rem;
+      padding: 1rem 1.5rem;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 2.5rem;
-      font-size: 0.88rem;
+      gap: 1.5rem 2.5rem;
+      font-size: 0.85rem;
     }
 
     .corp-item {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.5rem;
     }
 
     .corp-item i {
@@ -214,7 +236,7 @@
 
     /* Services Section */
     .services-section {
-      padding: 90px 2rem;
+      padding: 80px 1.5rem;
       max-width: 1200px;
       margin: 0 auto;
     }
@@ -225,28 +247,29 @@
     }
 
     .section-header h2 {
-      font-size: 2.3rem;
+      font-size: clamp(1.8rem, 4vw, 2.3rem);
       font-weight: 700;
       margin-bottom: 0.8rem;
     }
 
     .section-header p {
       color: var(--text-muted);
-      max-width: 620px;
+      max-width: 600px;
       margin: 0 auto;
+      font-size: 0.95rem;
     }
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.8rem;
     }
 
     .service-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 2.4rem 2rem;
+      border-radius: 14px;
+      padding: 2.2rem 1.8rem;
       transition: transform 0.3s ease, border-color 0.3s ease;
     }
 
@@ -256,14 +279,14 @@
     }
 
     .card-icon {
-      width: 58px;
-      height: 58px;
+      width: 54px;
+      height: 54px;
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 1.4rem;
+      font-size: 1.45rem;
+      margin-bottom: 1.3rem;
     }
 
     .icon-sql { background: rgba(6, 182, 212, 0.15); color: #06b6d4; }
@@ -271,15 +294,15 @@
     .icon-itc { background: rgba(37, 99, 235, 0.15); color: #60a5fa; }
 
     .service-card h3 {
-      font-size: 1.35rem;
-      margin-bottom: 0.9rem;
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
       font-weight: 700;
     }
 
     .service-card p {
       color: var(--text-muted);
-      font-size: 0.92rem;
-      margin-bottom: 1.4rem;
+      font-size: 0.9rem;
+      margin-bottom: 1.3rem;
       line-height: 1.6;
     }
 
@@ -288,7 +311,7 @@
     }
 
     .feature-list li {
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       color: var(--text-main);
       margin-bottom: 0.55rem;
       display: flex;
@@ -298,124 +321,125 @@
 
     .feature-list li i {
       color: #10b981;
-      font-size: 0.8rem;
-    }
-
-    /* About & Corporate Overview */
-    .about-section {
-      background: var(--card-bg);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 85px 2rem;
-    }
-
-    .about-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 3.5rem;
-      align-items: center;
-    }
-
-    .about-content h2 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 1.2rem;
-    }
-
-    .about-content p {
-      color: var(--text-muted);
-      margin-bottom: 1.2rem;
-      font-size: 0.96rem;
-    }
-
-    .corp-detail-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 2rem;
-    }
-
-    .corp-detail-card h3 {
-      font-size: 1.25rem;
-      margin-bottom: 1.2rem;
-      color: #60a5fa;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.8rem;
-    }
-
-    .corp-row {
-      margin-bottom: 1.1rem;
-    }
-
-    .corp-row label {
-      display: block;
       font-size: 0.78rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-weight: 700;
-      margin-bottom: 0.2rem;
     }
 
-    .corp-row span {
-      font-size: 0.92rem;
-      color: var(--text-main);
-      font-weight: 500;
-    }
-
-    /* Contact & Locations */
+    /* Contact & Locations Section */
     .contact-section {
-      padding: 90px 2rem;
+      padding: 80px 1.5rem 60px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
     .contact-layout {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2.5rem;
     }
 
-    .locations-container {
+    .contact-info-panel {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
     }
 
-    .location-box {
+    .info-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 1.6rem;
+      padding: 1.8rem;
     }
 
-    .location-box h4 {
-      font-size: 1.1rem;
+    .info-card h4 {
+      font-size: 1.15rem;
       color: #60a5fa;
-      margin-bottom: 0.6rem;
+      margin-bottom: 1rem;
       display: flex;
       align-items: center;
       gap: 0.6rem;
     }
 
-    .location-box p {
+    .hr-contact-box {
+      background: rgba(37, 99, 235, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.35);
+      border-radius: 10px;
+      padding: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .hr-badge {
+      display: inline-block;
+      background: #2563eb;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .hr-email-link {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #38bdf8;
+      font-weight: 600;
+      font-size: 0.95rem;
+      word-break: break-all;
+    }
+
+    .hr-email-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Addresses Container */
+    .address-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .address-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.2rem;
+    }
+
+    .address-card h5 {
+      color: #38bdf8;
+      font-size: 0.92rem;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .address-card p {
       color: var(--text-muted);
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       line-height: 1.6;
     }
 
+    /* Contact Form Card */
     .contact-form-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 2rem;
+      height: fit-content;
     }
 
     .contact-form-card h3 {
-      font-size: 1.4rem;
-      margin-bottom: 1.2rem;
+      font-size: 1.35rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-form-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin-bottom: 1.4rem;
     }
 
     .form-group {
@@ -427,11 +451,12 @@
       width: 100%;
       background: var(--surface);
       border: 1px solid var(--border);
-      padding: 0.8rem 1rem;
+      padding: 0.75rem 1rem;
       border-radius: 8px;
       color: #fff;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       outline: none;
+      transition: border-color 0.3s;
     }
 
     .form-group input:focus,
@@ -442,12 +467,13 @@
     .btn-submit {
       background: var(--primary);
       color: #fff;
-      padding: 0.85rem;
+      padding: 0.8rem;
       width: 100%;
       border: none;
       border-radius: 8px;
       font-weight: 600;
       cursor: pointer;
+      font-size: 0.95rem;
       transition: background 0.3s;
     }
 
@@ -459,70 +485,103 @@
     footer {
       border-top: 1px solid var(--border);
       background: #080d19;
-      padding: 3rem 2rem 2rem;
-      text-align: center;
+      padding: 3rem 1.5rem 2rem;
       color: var(--text-muted);
-      font-size: 0.85rem;
     }
 
-    .footer-content {
-      max-width: 1000px;
+    .footer-inner {
+      max-width: 1200px;
       margin: 0 auto;
-      margin-bottom: 1.5rem;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
     }
 
-    .footer-content h4 {
+    .footer-col h4 {
       color: #fff;
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.15rem;
+      margin-bottom: 0.8rem;
     }
 
-    .footer-cin {
-      color: #60a5fa;
+    .footer-col p {
       font-size: 0.85rem;
-      margin-bottom: 1rem;
+      line-height: 1.6;
+      margin-bottom: 0.6rem;
     }
 
-    @media (max-width: 900px) {
-      .about-container,
+    .footer-col .footer-cin-tag {
+      color: #38bdf8;
+      font-weight: 600;
+      font-size: 0.84rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: center;
+      font-size: 0.82rem;
+      color: #64748b;
+    }
+
+    /* Mobile Responsive Media Queries */
+    @media (max-width: 860px) {
+      .nav-links {
+        display: none;
+      }
       .contact-layout {
         grid-template-columns: 1fr;
       }
-      .hero h1 {
-        font-size: 2.3rem;
+      .address-grid {
+        grid-template-columns: 1fr;
       }
-      .nav-links {
-        display: none;
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+      }
+      .hero {
+        padding-top: 130px;
+      }
+      .hero-btns {
+        flex-direction: column;
+      }
+      .btn-primary, .btn-outline {
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation Bar -->
   <header>
     <div class="nav-container">
-      <div class="logo">Sarag Systems Pvt Ltd</div>
+      <div class="brand-box">
+        <a href="#home" class="logo">Sarag Systems Pvt Ltd</a>
+        <div class="cin-header-tag">CIN: <span>U72200TG1985PTC005952</span></div>
+      </div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Company</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#locations">Locations</a></li>
-        <li><a href="#contact" class="btn-contact">Get in Touch</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="btn-contact-nav">Reach Us</a></li>
       </ul>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero" id="home">
-    <div class="badge"><i class="fa-solid fa-certificate"></i> Established November 14, 1985</div>
-    <h1>Engineering Enterprise Innovation in <br /><span>Data Science, VLSI & ITC</span></h1>
+    <div class="badge"><i class="fa-solid fa-shield-halved"></i> Established November 14, 1985</div>
+    <h1>Innovating Through <br /><span>Data Science, VLSI & ITC</span></h1>
     <p>
-      Sarag Systems Pvt Ltd is a premier technology and software services firm dedicated to high-performance SQL architectures, end-to-end semiconductor VLSI solutions, and critical communications infrastructure.
+      Sarag Systems Pvt Ltd delivers end-to-end technology solutions — empowering businesses with robust SQL & Data Science architectures, precision VLSI semiconductor design, and mission-critical ITC infrastructure.
     </p>
     <div class="hero-btns">
-      <a href="#services" class="btn-primary">Our Core Services <i class="fa-solid fa-arrow-right"></i></a>
-      <a href="#about" class="btn-outline">Corporate Profile</a>
+      <a href="#services" class="btn-primary">Explore Services <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#contact" class="btn-outline">Contact HR & Operations</a>
     </div>
   </section>
 
@@ -534,58 +593,23 @@
     </div>
     <div class="corp-item">
       <i class="fa-solid fa-calendar-check"></i>
-      <span>Incorporation: <strong>November 14, 1985</strong></span>
+      <span>Incorporated: <strong>November 14, 1985</strong></span>
     </div>
     <div class="corp-item">
-      <i class="fa-solid fa-map-pin"></i>
-      <span>HQ: <strong>Somajiguda & Gachibowli, Hyderabad</strong></span>
+      <i class="fa-solid fa-location-dot"></i>
+      <span>Hyderabad, Telangana, India</span>
     </div>
   </div>
-
-  <!-- About Company Profile -->
-  <section class="about-section" id="about">
-    <div class="about-container">
-      <div class="about-content">
-        <h2>About Sarag Systems Pvt Ltd</h2>
-        <p>
-          Founded with a mission to deliver resilient digital and hardware foundations, Sarag Systems Pvt Ltd combines four decades of engineering legacy with cutting-edge modernization.
-        </p>
-        <p>
-          We bridge complex domain expertise across advanced Data Science, relational database architectures, custom silicon/VLSI engineering, and modern ITC enterprise infrastructure.
-        </p>
-      </div>
-
-      <div class="corp-detail-card">
-        <h3><i class="fa-solid fa-building"></i> Corporate Identification</h3>
-        <div class="corp-row">
-          <label>Company Legal Name</label>
-          <span>Sarag Systems Private Limited</span>
-        </div>
-        <div class="corp-row">
-          <label>Corporate Identification Number (CIN)</label>
-          <span>U72200TG1985PTC005952</span>
-        </div>
-        <div class="corp-row">
-          <label>Incorporation Date</label>
-          <span>November 14, 1985</span>
-        </div>
-        <div class="corp-row">
-          <label>Industry Verticals</label>
-          <span>SQL Data Engineering, VLSI Design, ITC Software Services</span>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Services Section -->
   <section class="services-section" id="services">
     <div class="section-header">
-      <h2>Technical Capabilities & Offerings</h2>
-      <p>Precision-engineered solutions tailored for scalable enterprise applications.</p>
+      <h2>Specialized Domain Capabilities</h2>
+      <p>High-reliability digital engineering, silicon architectures, and communications services.</p>
     </div>
 
     <div class="services-grid">
-      <!-- 1. SQL & Data Science -->
+      <!-- 1. SQL Development & Data Science -->
       <div class="service-card">
         <div class="card-icon icon-sql">
           <i class="fa-solid fa-database"></i>
@@ -595,10 +619,10 @@
           Architecting massive datasets with high-throughput SQL indexing, predictive models, enterprise data warehousing, and automated ETL pipelines.
         </p>
         <ul class="feature-list">
-          <li><i class="fa-solid fa-check"></i> Query Tuning & Database Optimization</li>
-          <li><i class="fa-solid fa-check"></i> Enterprise ETL & Real-time Pipelines</li>
-          <li><i class="fa-solid fa-check"></i> Statistical Data Modeling & Machine Learning</li>
-          <li><i class="fa-solid fa-check"></i> PostgreSQL, MySQL, SQL Server & BigQuery</li>
+          <li><i class="fa-solid fa-check"></i> Complex SQL Query Optimization & Tuning</li>
+          <li><i class="fa-solid fa-check"></i> Enterprise Data Warehousing & ETL Pipelines</li>
+          <li><i class="fa-solid fa-check"></i> Machine Learning & Predictive Analytics</li>
+          <li><i class="fa-solid fa-check"></i> PostgreSQL, MySQL & Big Data Scalability</li>
         </ul>
       </div>
 
@@ -609,13 +633,13 @@
         </div>
         <h3>VLSI & Semiconductor Design</h3>
         <p>
-          Comprehensive silicon engineering from concept to tape-out, delivering low-power, high-performance ASIC/FPGA digital design and verification.
+          Comprehensive silicon engineering from architecture to tape-out, delivering low-power, high-performance ASIC/FPGA digital design and verification.
         </p>
         <ul class="feature-list">
           <li><i class="fa-solid fa-check"></i> RTL Design & Verilog / SystemVerilog</li>
           <li><i class="fa-solid fa-check"></i> UVM-based Functional Verification</li>
-          <li><i class="fa-solid fa-check"></i> Synthesis, Static Timing Analysis & DFT</li>
-          <li><i class="fa-solid fa-check"></i> FPGA Prototyping & Embedded Systems</li>
+          <li><i class="fa-solid fa-check"></i> Synthesis, Static Timing Analysis (STA) & DFT</li>
+          <li><i class="fa-solid fa-check"></i> FPGA Prototyping & Silicon Validation</li>
         </ul>
       </div>
 
@@ -624,67 +648,85 @@
         <div class="card-icon icon-itc">
           <i class="fa-solid fa-network-wired"></i>
         </div>
-        <h3>ITC & Information Systems</h3>
+        <h3>ITC & Software Services</h3>
         <p>
-          Robust Information Technology & Communications services maintaining secure network backbones, hybrid cloud infrastructure, and custom software systems.
+          Robust Information Technology & Communications services maintaining secure network backbones, enterprise cloud infrastructure, and custom software systems.
         </p>
         <ul class="feature-list">
-          <li><i class="fa-solid fa-check"></i> Enterprise Telecom & VoIP Integrations</li>
-          <li><i class="fa-solid fa-check"></i> Secure Cloud Deployments (AWS/Azure)</li>
-          <li><i class="fa-solid fa-check"></i> Enterprise APIs & Custom Software Builds</li>
+          <li><i class="fa-solid fa-check"></i> Enterprise IT Infrastructure & Networking</li>
+          <li><i class="fa-solid fa-check"></i> Custom Software & Secure API Engineering</li>
+          <li><i class="fa-solid fa-check"></i> Cloud Integrations (AWS / Azure) & DevOps</li>
           <li><i class="fa-solid fa-check"></i> 24/7 Mission-Critical Systems Support</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- Locations & Contact -->
-  <section class="contact-section" id="locations">
+  <!-- Contact & Addresses Section -->
+  <section class="contact-section" id="contact">
     <div class="section-header">
-      <h2>Offices & Contact Information</h2>
-      <p>Connect with our technical and management teams at our Hyderabad offices.</p>
+      <h2>Contact & Office Locations</h2>
+      <p>Reach out to our HR and technical team for career opportunities or project inquiries.</p>
     </div>
 
     <div class="contact-layout">
-      <!-- Addresses -->
-      <div class="locations-container">
-        <div class="location-box">
-          <h4><i class="fa-solid fa-building-columns"></i> Registered Office</h4>
-          <p>
-            Plot No. 78, 6-3-661/B/1 Sangeeth Nagar,<br />
-            Somajiguda, Hyderabad,<br />
-            Telangana - 500082, India.
-          </p>
-        </div>
+      <!-- Left Panel: HR & Addresses -->
+      <div class="contact-info-panel">
+        <div class="info-card">
+          <h4><i class="fa-solid fa-headset"></i> Get in Touch</h4>
 
-        <div class="location-box">
-          <h4><i class="fa-solid fa-city"></i> Operational Location</h4>
-          <p>
-            3rd Floor / 1st Floor, Vasista Bhavan,<br />
-            Opposite Lane to DLF Cyber City, APHB Colony,<br />
-            Gachibowli / Indira Nagar, Hyderabad,<br />
-            Telangana - 500032, India.
-          </p>
+          <!-- HR Contact Box -->
+          <div class="hr-contact-box">
+            <span class="hr-badge">Human Resources / Contact</span>
+            <a href="mailto:sikindhar.shaik@saragreg.com" class="hr-email-link">
+              <i class="fa-solid fa-envelope"></i> sikindhar.shaik@saragreg.com
+            </a>
+          </div>
+
+          <!-- Locations -->
+          <div class="address-grid">
+            <!-- Registered Office -->
+            <div class="address-card">
+              <h5><i class="fa-solid fa-building-columns"></i> Registered Office</h5>
+              <p>
+                Plot No. 78, 6-3-661/B/1 Sangeeth Nagar,<br />
+                Somajiguda, Hyderabad,<br />
+                Telangana - 500082, India.
+              </p>
+            </div>
+
+            <!-- Operational Location -->
+            <div class="address-card">
+              <h5><i class="fa-solid fa-city"></i> Operational Location</h5>
+              <p>
+                3rd Floor / 1st Floor, Vasista Bhavan,<br />
+                Opposite Lane to DLF Cyber City, APHB Colony,<br />
+                Gachibowli / Indira Nagar, Hyderabad,<br />
+                Telangana - 500032, India.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Contact Form -->
-      <div class="contact-form-card" id="contact">
-        <h3>Send an Inquiry</h3>
-        <form onsubmit="event.preventDefault(); alert('Thank you for reaching out to Sarag Systems Pvt Ltd.');">
+      <!-- Right Panel: Inquiry Form -->
+      <div class="contact-form-card">
+        <h3>Send a Message</h3>
+        <p>Drop your inquiry and our team will get back to you promptly.</p>
+        <form onsubmit="event.preventDefault(); alert('Inquiry sent successfully to Sarag Systems Pvt Ltd.');">
           <div class="form-group">
-            <input type="text" placeholder="Full Name" required />
+            <input type="text" placeholder="Your Name" required />
           </div>
           <div class="form-group">
-            <input type="email" placeholder="Business Email" required />
+            <input type="email" placeholder="Your Email" required />
           </div>
           <div class="form-group">
-            <input type="text" placeholder="Service Requirement (SQL / VLSI / ITC)" required />
+            <input type="text" placeholder="Subject / Requirement (SQL / VLSI / ITC / HR)" required />
           </div>
           <div class="form-group">
-            <textarea rows="4" placeholder="Brief project description or inquiry details..." required></textarea>
+            <textarea rows="4" placeholder="Your Message..." required></textarea>
           </div>
-          <button type="submit" class="btn-submit">Submit Inquiry</button>
+          <button type="submit" class="btn-submit">Submit Message</button>
         </form>
       </div>
     </div>
@@ -692,15 +734,40 @@
 
   <!-- Footer -->
   <footer>
-    <div class="footer-content">
-      <h4>Sarag Systems Pvt Ltd</h4>
-      <div class="footer-cin">Corporate Identification Number (CIN): U72200TG1985PTC005952</div>
-      <p>
-        Registered Office: Plot No. 78, 6-3-661/B/1 Sangeeth Nagar, Somajiguda, Hyderabad, TS 500082<br />
-        Operations: Vasista Bhavan, opp. lane to DLF Cyber City, Gachibowli, Hyderabad, TS 500032
-      </p>
+    <div class="footer-inner">
+      <!-- Col 1 -->
+      <div class="footer-col">
+        <h4>Sarag Systems Pvt Ltd</h4>
+        <div class="footer-cin-tag">Corporate Identification Number (CIN): U72200TG1985PTC005952</div>
+        <p>Incorporated on November 14, 1985. Committed to software excellence, VLSI engineering, and ITC solutions.</p>
+        <p><i class="fa-solid fa-envelope" style="color: #38bdf8; margin-right: 6px;"></i> HR: <a href="mailto:sikindhar.shaik@saragreg.com" style="color: #38bdf8;">sikindhar.shaik@saragreg.com</a></p>
+      </div>
+
+      <!-- Col 2: Registered Office -->
+      <div class="footer-col">
+        <h4>Registered Office</h4>
+        <p>
+          Plot No. 78, 6-3-661/B/1 Sangeeth Nagar,<br />
+          Somajiguda, Hyderabad,<br />
+          Telangana - 500082, India.
+        </p>
+      </div>
+
+      <!-- Col 3: Operational Location -->
+      <div class="footer-col">
+        <h4>Operational Location</h4>
+        <p>
+          3rd Floor / 1st Floor, Vasista Bhavan,<br />
+          Opposite Lane to DLF Cyber City, APHB Colony,<br />
+          Gachibowli / Indira Nagar, Hyderabad,<br />
+          Telangana - 500032, India.
+        </p>
+      </div>
     </div>
-    <p>&copy; 2026 Sarag Systems Pvt Ltd. All rights reserved.</p>
+
+    <div class="footer-bottom">
+      &copy; 2026 Sarag Systems Pvt Ltd. All rights reserved.
+    </div>
   </footer>
 
 </body>
